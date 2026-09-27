@@ -63,8 +63,8 @@ function postDisaster(){
               name: disasterName,
               description: disasterDescription,
               type: disasterType,
-              starts_at: disasterStartsAt,
-              ends_at: disasterEndsAt,
+              starts_at: disasterStartsAt? new Date(disasterStartsAt).toISOString() : null,
+              ends_at: disasterEndsAt? new Date(disasterEndsAt).toISOString() : null,
           })
       });
 
@@ -98,28 +98,16 @@ function postDisaster(){
         id="starts-at"
         type="datetime-local"
         name="starts-at-date"
-        onChange={e=>setDisasterStartsAt(()=>{
-            if (e.target.value===''){
-                return '';
-            }else{
-                return new Date(e.target.value).toISOString()
-            }
-        })}
-        value={disasterStartsAt.slice(0,-1)}
+        onChange={e=>setDisasterStartsAt(e.target.value)}
+        value={disasterStartsAt}
        />
 
       <input
         id="ends-at"
         type="datetime-local"
         name="ends-at-date"
-        onChange={e=>setDisasterEndsAt(()=>{
-            if (e.target.value===''){
-                return '';
-            }else{
-                return new Date(e.target.value).toISOString()
-            }
-        })}
-        value={disasterEndsAt.slice(0,-1)}
+        onChange={e=>setDisasterEndsAt(e.target.value)}
+        value={disasterEndsAt}
        />
 
 

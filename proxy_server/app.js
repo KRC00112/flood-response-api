@@ -39,8 +39,29 @@ app.post('/api/v1/disasters', async(req, res)=>{
     res.send(data);
 })
 
+app.get('/api/v1/affected-areas/page={:page}/limit={:limit}',async(req, res)=>{
+    const response=await fetch(`https://flood-response-api.onrender.com/api/v1/affected-areas?page=${req.params.page}&limit=${req.params.limit}`);
+    const data=await response.json();
+    res.send(data)
+})
+
+app.get('/api/v1/affected-areas/{:id}',async(req, res)=>{
+    const response=await fetch(`https://flood-response-api.onrender.com/api/v1/affected-areas/${req.params.id}`);
+    const data=await response.json();
+    res.send(data);
+})
 
 
+app.post('/api/v1/affected_areas/', async(req, res)=>{
+    const response=await(`https://flood-response-api.onrender.com/api/v1/affected-areas`,{
+        method: "POST",
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(req.body)
+
+    });
+})
 
 
 app.listen(port,()=>{
