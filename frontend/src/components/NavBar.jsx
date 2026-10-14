@@ -1,14 +1,17 @@
 import '../css/navbar.css'
 
-function NavBar({handleShowForm}){
+function NavBar({}){
     return(
         <div className='navigation-menu'>
             <ul>
                 <li>
-                    <button onClick={handleShowForm}>Report Affected Area</button>
+                    <button>Home</button>
                 </li>
                 <li>
-                    <button onClick={handleShowForm}>SOS</button>
+                    <button>SOS</button>
+                </li>
+                <li>
+                    <button>Profile</button>
                 </li>
             </ul>
         </div>

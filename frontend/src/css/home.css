@@ -1,0 +1,57 @@
+.languageList{
+    gap:5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.languageList li{
+    flex: 0;
+   
+    
+}
+
+.languageList li button{
+    width: fit-content;
+    border-radius: 8px;
+    border: 1px solid rgb(130, 130, 128);
+    padding: 4px;
+    padding-inline: 8px;
+
+}
+
+.card{
+    background-color: white;
+    border: 1px solid rgb(130, 130, 128);
+    border-radius: 8px;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-more-arrow{
+    padding: 5px;
+    border-radius: 100%;
+    padding-inline: 10px;
+    font-size: large;
+    background-color: rgb(245, 245, 234);
+    border: 1px solid rgb(130, 130, 128);
+    
+    
+}
+
+.home-cards{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.card-desc div{
+    /* font-size: 15px; */
+    color:rgb(130, 130, 128);
+}
+
+.selectedLang{
+    background-color: rgb(201, 201, 201);
+}

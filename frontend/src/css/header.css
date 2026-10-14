@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow:  0em 0.1em .3em rgba(171, 170, 170, 0.6);
+    padding: 20px;
+
+
+}
