@@ -1,0 +1,38 @@
+.form{
+    width: 300px;
+    background-color: aqua;
+    
+}
+
+.severities{
+    display: flex;
+    width: fit-content;
+}
+
+.choice,
+.choice label {
+    cursor: pointer;
+}
+
+.location-input-types{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.checkbox-radio {
+    width: 0.9em;
+    height: 0.9em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #272626;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    
+}
+
+.checkbox-radio:checked {
+    background-color: rgb(237, 138, 72);
+}

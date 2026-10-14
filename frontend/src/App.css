@@ -1,12 +1,22 @@
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.leaflet-container {
+.main{
+  display: flex;
+  flex-direction: row;
   height: 100vh;
-  width: 100wh;
+  /* border: 2px solid salmon; */
+}
+.overlay{
+  background-color: #30313080;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
